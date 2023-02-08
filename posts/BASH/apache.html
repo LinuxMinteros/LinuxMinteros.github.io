@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="/images/linux_logo.ico" type="image/x-icon">
+	<title>LinuxMinter@s.io</title>
+	<style type="text/css">
+		.ventana{
+			color: green;
+			width: 1000px;
+			height: 1000px;
+			border: solid limegreen; 1px;
+			border-radius: 5px 5px 5px 5px;
+			background-color: whitesmoke;
+
+		}
+		li{
+			float: left;
+		}
+		.menu{
+			color: green;
+			width: 600px;
+			height: 50px;
+			position: relative;
+			border: solid limegreen 1px;
+			border-radius: 10px 10px 10px 10px;
+			background-color: black;
+			margin: 2px;
+			top: -4%;
+		}
+		.reset{
+			color: green;
+			width: 600px;
+			height: 600px;
+			position: relative;
+			border: solid limegreen 1px;
+			border-radius: 10px 5px 10px 5px;
+			background-color: black;
+			margin: 2px;
+			top: -10;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="ventana">
+		<img src="/images/linux_logo.png" width="200" height="200"><h1 style="color: limegreen; font-style: italic; position: relative; left: 20%; top: -3%;">LinuxMinter@s</h1>
+		<div class="menu">
+			<ul>
+				<li><a style="color: limegreen;" href="/index.html">Home &nbsp  &nbsp  &nbsp</a></li> 
+				<li><a style="color: limegreen;" href="/news/news.html">Files &nbsp  &nbsp  &nbsp</a></li>
+				<li><a style="color: limegreen;" href="/posts/posts.html">Posts &nbsp  &nbsp  &nbsp</a></li>
+				<li><a style="color: limegreen;" href="https://linuxminteros.foroactivo.com/">Forum</a></li>
+			</ul>
+		</div>
+		<div class="reset"><br>
+			<font size="4" color="green">Intalacion de apache2 en linuxmint</font>
+			<p style="color: limegreen; font-style: italic; margin: 10px;">
+				Saludos en este pequeño posts mostrare como instalar apache2 en nuestra
+				distro linuxmint.<br>
+				Para ello actualizamos los repositorios y sistema con el siguiente comando:<br>
+				<font color="red" size="2">sudo apt -y upgrade && sudo apt -y upgrade</font><br>
+				Esperamos a que finalize y continuamos instalando apache2 con aptitude:<br>
+				<font color="red" size="2">sudo apt -y install apache2</font><br>
+				Despues de esto ya tendriamos automaticamente el servicio corriendo en el puerto
+				80 de nuestro computador. En caso de que no este encendido lo podemos encender con
+				con el siguiente comando:<br>
+				<font color="red" size="2">sudo systemctl enable apache2.service</font><br>
+				<font color="red" size="2">sudo systemctl start apache2.service</font><br>
+				El systemctl enable es para que el servicio se inicie cuando se enciende el
+				computador y el start inicia el servicio.
+				En caso de que quisieramos desactivar el servicio ejecutamos los siguientes
+				comandos:<br>
+				<font color="red" size="2">sudo systemctl disable apache2.service</font><br>
+				<font color="red" size="2">sudo systemctl stop apache2.service</font><br>
+				El systemctl disable es para quitarlo de los servicios que se inician al encender
+				el computador y la opcion stop detiene el servicio por completo.
+				Y bueno espero te fuera de ayuda este posts, hasta la proxima.
+				</p>
+		</div>
+		<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://linuxminter-s.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	</div>
+</body>
+</html>

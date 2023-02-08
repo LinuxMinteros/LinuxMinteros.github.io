@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="/images/linux_logo.ico" type="image/x-icon">
+	<title>LinuxMinter@s.io</title>
+	<style type="text/css">
+		.ventana{
+			color: green;
+			width: 1000px;
+			height: 1900px;
+			border: solid limegreen; 1px;
+			border-radius: 5px 5px 5px 5px;
+			background-color: whitesmoke;
+
+		}
+		li{
+			float: left;
+		}
+		.menu{
+			color: green;
+			width: 600px;
+			height: 50px;
+			position: relative;
+			border: solid limegreen 1px;
+			border-radius: 10px 10px 10px 10px;
+			background-color: black;
+			margin: 2px;
+			top: -4%;
+		}
+		.reset{
+			color: green;
+			width: 600px;
+			height: 1500px;
+			position: relative;
+			border: solid limegreen 1px;
+			border-radius: 10px 5px 10px 5px;
+			background-color: black;
+			margin: 2px;
+			top: -10;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="ventana">
+		<img src="/images/linux_logo.png" width="200" height="200"><h1 style="color: limegreen; font-style: italic; position: relative; left: 20%; top: -3%;">LinuxMinter@s</h1>
+		<div class="menu">
+			<ul>
+				<li><a style="color: limegreen;" href="/index.html">Home &nbsp  &nbsp  &nbsp</a></li> 
+				<li><a style="color: limegreen;" href="/news/news.html">Files &nbsp  &nbsp  &nbsp</a></li>
+				<li><a style="color: limegreen;" href="/posts/posts.html">Posts &nbsp  &nbsp  &nbsp</a></li>
+				<li><a style="color: limegreen;" href="https://linuxminteros.foroactivo.com/">Forum</a></li>
+			</ul>
+		</div>
+		<div class="reset"><br>
+			<font size="4" color="green">Intalacion de apache2 en linuxmint</font>
+			<p style="color: limegreen; font-style: italic; margin: 10px;">
+				Saludos, hoy veremos algunos comandos basicos para linux.
+				A continuacion nombraremos los comandos y sus usos:<br>
+				<font size="4" color="blue">comando cd :</font>
+				El comando cd por sus siglas change directory, funciona para entrar en
+				carpetas desde el terminal por ejemplo, digamos que tenemos una carpeta
+				llamada fotos y queremos entrar dentro de ella para eso escribimos<br>
+				<font size="2" color="red">cd fotos</font><br>
+				Su uso basico es:
+				<font size="2" color="red">cd &#60;nombre de la carpeta&#62;</font>
+				</p>
+				<font size="4" color="blue">Comando ls: </font>
+				El comando ls por siglas llamado list, funciona para listar los archivos dentro de
+				una carpeta.<br>
+				Funciona de la siguiente manera:<br>
+
+				<font color="red" size="2">
+					user@notebook:~$ ls<br>
+					Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+				</font>
+				Como podemos ver al hacer el comando ls se listan todas las carpetas dentro del directorio.
+				Asi tambien se listarian si hay archivos de texto etc.
+				Pero no se listan los archivos que estan ocultos, para poder visualizarlos tendremos que agregarle un argumento al comando ls.
+				<font color=" red" size="2"><br>
+					user@notebook:~$ ls -a<br>
+					.              Downloads      .linuxmint  .sudo_as_admin_successful<br>
+					..             .ecryptfs      .local      Templates<br>
+					.bash_history  .gnupg         .mozilla    .themes<br>
+					.bash_logout   .gtkrc-2.0     Music       .var<br>
+					.bashrc        .gtkrc-xfce    Pictures    Videos<br>
+					.cache         .ICEauthority  .Private    .Xauthority<br>
+					.config        .icons         .profile    .xsession-errors<br>
+					Desktop        .ipython       Public      .xsession-errors.old<br>
+					Documents      .irssi         .ssh<br>
+				</font>
+				Como puedes ver se muestran muchos mas ficheros que estaban ocultos en la carpeta.
+				Tambien podemos visualizar los permisos de los ficheros con el siguiente comando:<br>
+				<font color="red" size="2">
+					ratman@notebook:~$ ls -l<br>
+					total 32<br>
+					drwxr-xr-x 7 ratman ratman 4096 Feb  6 17:29 Desktop<br>
+					drwxr-xr-x 2 ratman ratman 4096 Feb  4 12:43 Documents<br>
+					drwxr-xr-x 3 ratman ratman 4096 Feb  7 15:19 Downloads<br>
+					drwxr-xr-x 2 ratman ratman 4096 Jan 24 18:14 Music<br>
+					drwxr-xr-x 2 ratman ratman 4096 Feb  6 18:23 Pictures<br>
+					drwxr-xr-x 2 ratman ratman 4096 Jan 24 18:14 Public<br>
+					drwxr-xr-x 2 ratman ratman 4096 Jan 24 18:14 Templates<br>
+					drwxr-xr-x 2 ratman ratman 4096 Feb  6 09:07 Videos<br>
+				</font>
+				<font size="4" color="blue">Comando mkdir : </font>El comando mkdir de su nombre make directory
+				funciona para crear un directorio o tambien llamado carpeta, su uso es bastante basico:<br>
+				<font color="red" size="2">ratman@notebook:~$ mkdir carpeta</font><br>
+				Si hacemos un ls la carpeta se habra agregado:<br>
+				<font color="red" size="2">
+					ratman@notebook:~$ ls -1<br>
+					carpeta<br>
+					Desktop<br>
+					Documents<br>
+					Downloads<br>
+					Music<br>
+					Pictures<br>
+					Public<br>
+					Templates<br>
+					Videos<br>
+				</font>
+				<font size="4" color="blue">comando rm: </font>Este comando funciona tanto para borrar ficheros 
+				de texto, como directorios o carpetas, debes tener cuidado en la forma que lo usas con una cuenta
+				de administrador, ya que facilmente puedes borrar alguna carpeta importante del sistema y petar tu computador.<br>
+				Su uso basico es el siguiente:<br>
+				<font color="red" size="2">
+					ratman@notebook:~$ rm -r carpeta/<br>
+					ratman@notebook:~$ ls<br>
+					Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos<br>
+				</font><br>
+				Como podemos ver se borro la carpeta< que creamos anteriormente.<br>
+				<font color="blue" size="4">comando mv: </font>comando move, se utiliza para mover archivos o carpetas
+				de una direccion a otra, su uso basico es el siguiente:<br>
+				<font color="red" size="2">
+					mv miarchivo rutadondeseguardara
+				</font>
+				Bueno estos fueron algunos comandos, hare una segunda parte, hasta la proxima.
+				</p>
+			</div>
+		</div>
+		<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://linuxminter-s.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	</div>
+</body>
+</html>
